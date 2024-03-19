@@ -1,0 +1,18 @@
+
+    <div class="container mt-5">
+        <div class="row justify-content-between">
+
+            {{#each fruits}}
+            <div class="card col-3">
+                <img src={{this.image}} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                    <h4 class="card-title">Price : {{this.price}}</h4>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    
