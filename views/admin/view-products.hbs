@@ -1,0 +1,31 @@
+
+
+<div class="container">
+    <h1 class="display-2">Products</h1>
+    <a href="admin/add-products" class="btn btn-primary">Add Products</a>
+
+<table class="table mt-5">
+  <thead>
+
+
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Item</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Thumbnail</th>
+    </tr>
+  </thead>
+  <tbody>
+        {{#each fruits}}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{name}}</td>
+      <td>{{description}}</td>
+      <td>{{price}}</td>
+      <td><img  style="width: 70px; height : 70px;" src="{{image}}" alt=""></td>
+    </tr>
+        {{/each}}
+  </tbody>
+</table>
+</div>

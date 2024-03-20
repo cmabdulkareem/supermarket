@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <form method="post" action="add-products" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleInputIname">Item Name</label>
+            <input type="text" class="form-control" id="exampleInputIname" aria-describedby="emailHelp"
+                placeholder="Enter product name">
+        </div><br>
+        <div class="form-group">
+            <label for="exampleInputDesc">Description</label>
+            <input type="text" class="form-control" id="exampleInputDesc" aria-describedby="emailHelp"
+                placeholder="Enter product description">
+        </div><br>
+        <div class="form-group">
+            <label for="exampleInputPrice">Price</label>
+            <input type="text" class="form-control" id="exampleInputPrice" aria-describedby="emailHelp"
+                placeholder="Enter product description">
+        </div><br>
+        <div class="form-group">
+            <label for="formFile" class="form-label">Upload item image</label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+
+
+        <button type="submit" class="btn btn-success mt-3">Add product</button>
+        <button type="reset" class="btn btn-danger mt-3">Clear</button>
+    </form>
+</div>
