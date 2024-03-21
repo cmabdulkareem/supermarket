@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require("express-handlebars");
+var fileUpload = require("express-fileupload");
+var db = require('./config/connection')
+
 
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
@@ -13,6 +16,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+app.use(fileUpload());
 app.engine('hbs', hbs.engine({
   extname: 'hbs',
   defaultLayout: 'layout',
@@ -24,7 +28,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+db.connect(function(err){
+  if(err)
+    console.log("database connection error");
+  else
+    console.log("database connected")
+})
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 
