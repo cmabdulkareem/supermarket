@@ -7,5 +7,14 @@ module.exports={
             console.log(data.insertedId)
             callback(data.insertedId)
         })
+    },
+    getAllProducts:(callback) =>{
+        db.get().collection('product').find().toArray((err, products) =>{
+            if (err){
+                callback(err);
+            }else{
+                callback(null, products)
+            }
+            })
+        }
     }
-}

@@ -20,10 +20,10 @@
         {{#each fruits}}
     <tr>
       <th scope="row">1</th>
-      <td>{{name}}</td>
-      <td>{{description}}</td>
-      <td>{{price}}</td>
-      <td><img  style="width: 70px; height : 70px;" src="{{image}}" alt=""></td>
+      <td>{{itemName}}</td>
+      <td>{{itemDesc}}</td>
+      <td>{{itemPrice}}</td>
+      <td><img  style="width: 70px; height : 70px;" src="/images/product-images/{{this._id}}.jpg" alt=""></td>
     </tr>
         {{/each}}
   </tbody>
